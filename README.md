@@ -1,2 +1,3 @@
-# TensorFlow_toturial
-Basic use of  tensorflow  and implement some networks.
+## TensorFlow_toturial
+#MLP: including train.py,eval.py and model.py
+      
