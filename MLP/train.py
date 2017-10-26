@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2017/7/10 16:42
+# @Author  : Zoe
+# @Site    : 
+# @File    : train.py.py
+# @Software: PyCharm Community Edition
 import inference
 import tensorflow as tf
 from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
@@ -58,8 +65,6 @@ def main(argv=None):
 
 if __name__ == '__main__':
     tf.app.run()
-
-
 
 
 ##TODO: Training process
@@ -163,3 +168,4 @@ if __name__ == '__main__':
 # After 9701 training steps, loss 0.0712243, training accuracy 0.98
 # After 9801 training steps, loss 0.137363, training accuracy 0.98
 # After 9901 training steps, loss 0.0941356, training accuracy 0.97
+
