@@ -17,4 +17,5 @@ label propagation是一种半监督学习算法，主要基于三种假设：<br
 **标签传播** <br>
 标签传播即通过节点间的边传播标签信息，边的权重越大，表示两个节点越相似，此时的概率转移矩阵为：<br>
 ![fraction2](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/fraction2.gif?raw=true) 
-<img src="http://latex.codecogs.com/gif.latex?\alpha />
+
+![](http://latex.codecogs.com/gif.latex?\\alpha)
