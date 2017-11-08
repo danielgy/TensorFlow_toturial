@@ -19,19 +19,28 @@ label propagation是一种半监督学习算法，主要基于三种假设：<br
 ![fraction2](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/fraction2.gif?raw=true) <br>
 
 其中![](http://latex.codecogs.com/gif.latex?\p_{ij})表示从节点i转移到节点j的概率。
-另外假设有M个分类N个样本，其中有label的为N1个，没有label的为N2个，则可以对label构建两个矩阵分别为N1*M的$y_l$和N2*M的$y_u$,$y_u$由于无标签信息，则可以随机初始化，此时定义![](http://latex.codecogs.com/gif.latex?\f=[y_l,y_u ])。<br>
+另外假设有M个分类N个样本，其中有label的为N1个，没有label的为N2个，则可以对label构建两个矩阵分别为N1*M的![](http://latex.codecogs.com/gif.latex?\\y_l)和N2*M的![](http://latex.codecogs.com/gif.latex?\\y_u),![](http://latex.codecogs.com/gif.latex?\\y_u)由于无标签信息，则可以随机初始化，此时定义![](http://latex.codecogs.com/gif.latex?\\f=[y_l,y_u ])。<br>
 此时迭代计算过程如下：
 > - 计算f=pf
-> - 更高label的标签：![](http://latex.codecogs.com/gif.latex?\f_l=y_l)
+> - 更高label的标签：![](http://latex.codecogs.com/gif.latex?\\f_l=y_l)
 > - 重复上述过程直至f收敛
 
 **简化计算** <br>
 如下所示，矩阵P构成为：
-![](http://latex.codecogs.com/gif.latex?\\P=\begin{bmatrix}p_{ll} & p_{lu} \\ p_{ul} & p_{uu} \end{bmatrix})
+![fraction3](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/fraction3.gif?raw=true) <br>
 由于![](http://latex.codecogs.com/gif.latex?\\y_l)始终不变，因此实际计算的只有：
-![](http://latex.codecogs.com/gif.latex?\f_{u}\\leftarrow p_{uu}f_{u}+p_{ul}y_{l})
+![fraction4](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/fraction4.gif?raw=true) <br>
 迭代上式至收敛则得到解。
 另外，可以直接用如下公式得到解为：
-![](http://latex.codecogs.com/gif.latex?\f_{u}\\f_{u}=(I-p_{uu})^{-1}p_{ul}y_{l})
+![fraction5](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/fraction5.gif?raw=true) <br>
+### 实验结果： <br>
 
+![result1](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result1.png?raw=true) <br>
 
+![result2](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result2.png?raw=true) <br>
+![result3](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result3.png?raw=true) <br>
+![result4](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result4.png?raw=true) <br>
+![result5](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result5.png?raw=true) <br>
+![result6](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result6.png?raw=true) <br>
+![result7](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result7.png?raw=true) <br>
+![result8](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result8.png?raw=true) <br>
