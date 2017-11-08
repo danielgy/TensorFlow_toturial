@@ -36,7 +36,6 @@ label propagation是一种半监督学习算法，主要基于三种假设：<br
 ### 实验结果： <br>
 
 ![result1](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result1.png?raw=true) <br>
-
 ![result2](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result2.png?raw=true) <br>
 ![result3](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result3.png?raw=true) <br>
 ![result4](https://github.com/danielgy/TensorFlow_toturial/blob/master/Label_propagation/images/result4.png?raw=true) <br>
