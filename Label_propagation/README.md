@@ -1,3 +1,6 @@
+
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+
 # label propagation(标签传播)
 
 ## label propagation 原理
