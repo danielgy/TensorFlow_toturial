@@ -8,44 +8,44 @@
 对于较小的数据集，该模型的表现可能不太好，但随着数据集规模的增大，该模型的表现会有明显的提高。
 
 定义X为N*d维输入，y为N*c维输出,K为专家数，![](http://latex.codecogs.com/gif.latex?\\lambda) 为学习率：<br>
-![fraction1](https://github.com/ZoeYuhan/machine-learning/blob/master/images/MOE_1.gif?raw=true) <br>
- 各专家输出为:   ![fraction2](https://github.com/ZoeYuhan/machine-learning/blob/master/images/MOE_2.gif?raw=true) <br>
+![fraction1](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/MOE_1.gif?raw=true) <br>
+ 各专家输出为:   ![fraction2](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/MOE_2.gif?raw=true) <br>
 *(其中![](http://latex.codecogs.com/gif.latex?\w_{ik})为第k个专家模型对第i列输出的权重，![](http://latex.codecogs.com/gif.latex?\V_{ik})为第k个专家对第i列的预测。（$w_{ik}$添加了bias所以输出为d+1维）)*
 
-第k个专家输出均值为：![fraction3](https://github.com/ZoeYuhan/machine-learning/blob/master/images/MOE_3.gif?raw=true) <br>
+第k个专家输出均值为：![fraction3](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/MOE_3.gif?raw=true) <br>
 
-门限模块输出为：![fraction4](https://github.com/ZoeYuhan/machine-learning/blob/master/images/MOE_4.gif?raw=true) <br>
-输出$y_i$通过softmax函数转成概率值为：![fraction5](https://github.com/ZoeYuhan/machine-learning/blob/master/images/MOE_5.gif?raw=true) <br>
+门限模块输出为：![fraction4](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/MOE_4.gif?raw=true) <br>
+输出$y_i$通过softmax函数转成概率值为：![fraction5](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/MOE_5.gif?raw=true) <br>
 
 对于Cooperative MoE：<br>
-![fraction6](https://github.com/ZoeYuhan/machine-learning/blob/master/images/MOE_6.gif?raw=true) <br>
-![fraction7](https://github.com/ZoeYuhan/machine-learning/blob/master/images/moe_7.gif?raw=true) <br>
+![fraction6](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/MOE_6.gif?raw=true) <br>
+![fraction7](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/moe_7.gif?raw=true) <br>
 
 对于Competitive MoE：<br>
-![fraction8](https://github.com/ZoeYuhan/machine-learning/blob/master/images/moe_8.gif?raw=true) <br>
-![fraction9](https://github.com/ZoeYuhan/machine-learning/blob/master/images/MOE_9.gif?raw=true) <br>
-![fraction10](https://github.com/ZoeYuhan/machine-learning/blob/master/images/moe_10.gif?raw=true) <br>
-![fraction11](https://github.com/ZoeYuhan/machine-learning/blob/master/images/moe_11.gif?raw=true) <br>
+![fraction8](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/moe_8.gif?raw=true) <br>
+![fraction9](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/MOE_9.gif?raw=true) <br>
+![fraction10](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/moe_10.gif?raw=true) <br>
+![fraction11](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/moe_11.gif?raw=true) <br>
 
 
 ### **实验结果：**
 
 #### **不同数据集相同k值：**
 1. k=2使用线性数据集，采用SGD和FTRL两种训练方式，结果如下：
-![bar1](https://github.com/ZoeYuhan/machine-learning/blob/master/images/bat_result1.png?raw=true) <br>
-![bar2](https://github.com/ZoeYuhan/machine-learning/blob/master/images/bat_result2.png?raw=true) <br>
+![bar1](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/bat_result1.png?raw=true) <br>
+![bar2](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/bat_result2.png?raw=true) <br>
 2. k=2使用非线性数据集，采用SGD和FTRL两种训练方式，结果如下：
-![circle1](https://github.com/ZoeYuhan/machine-learning/blob/master/images/circle_result1.png?raw=true) <br>
-![circle2](https://github.com/ZoeYuhan/machine-learning/blob/master/images/circle_result2.png?raw=true) <br>
+![circle1](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/circle_result1.png?raw=true) <br>
+![circle2](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/circle_result2.png?raw=true) <br>
 
 
 #### **相同数据集不同k值：**
 1. k=1:
-![k=1](https://github.com/ZoeYuhan/machine-learning/blob/master/images/circle_k=1_2.png?raw=true) <br>
-![k=1](https://github.com/ZoeYuhan/machine-learning/blob/master/images/circle_k=1_1.png?raw=true) <br>
+![k=1](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/circle_k=1_2.png?raw=true) <br>
+![k=1](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/circle_k=1_1.png?raw=true) <br>
 2. k=2:
-![k=2](https://github.com/ZoeYuhan/machine-learning/blob/master/images/circle_k=2_1.png?raw=true) <br>
-![k=2](https://github.com/ZoeYuhan/machine-learning/blob/master/images/circle_k=2_2.png?raw=true) <br>
+![k=2](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/circle_k=2_1.png?raw=true) <br>
+![k=2](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/circle_k=2_2.png?raw=true) <br>
 3. k=4:
-![k=4](https://github.com/ZoeYuhan/machine-learning/blob/master/images/circle_k=4_1.png?raw=true) <br>
-![k=4](https://github.com/ZoeYuhan/machine-learning/blob/master/images/circle_k=4_2.png?raw=true) <br>
+![k=4](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/circle_k=4_1.png?raw=true) <br>
+![k=4](https://github.com/danielgy/TensorFlow_toturial/blob/master/MoE/images/circle_k=4_2.png?raw=true) <br>
