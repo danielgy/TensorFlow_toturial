@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 31 18:52:57 2018
+@author: GY
+"""
 import time
 import numpy as np
 
@@ -92,4 +97,3 @@ def labelPropagation(Mat_Label, Mat_Unlabel, labels, kernel_type='rbf', rbf_sigm
         unlabel_data_labels[i] = np.argmax(label_function[i + num_label_samples])
 
     return unlabel_data_labels
-
