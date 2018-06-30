@@ -1,11 +1,8 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Time    : 2017/7/10 16:50
-# @Author  : Zoe
-# @Site    : 
-# @File    : eval.py.py
-# @Software: PyCharm Community Edition
-
+"""
+Created on Thu May 31 18:52:57 2018
+@author: GY
+"""
 import time
 import tensorflow as tf
 from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
