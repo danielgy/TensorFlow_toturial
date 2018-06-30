@@ -1,10 +1,8 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Time    : 2017/7/10 16:34
-# @Author  : Zoe
-# @Site    : 
-# @File    : inference.py.py
-# @Software: PyCharm Community Edition
+"""
+Created on Thu May 31 18:52:57 2018
+@author: GY
+"""
 
 import tensorflow as tf
 
