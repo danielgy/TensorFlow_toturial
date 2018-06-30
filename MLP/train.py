@@ -1,15 +1,14 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @Time    : 2017/7/10 16:42
-# @Author  : Zoe
-# @Site    : 
-# @File    : train.py.py
-# @Software: PyCharm Community Edition
+"""
+Created on Thu May 31 18:52:57 2018
+@author: GY
+"""
 import inference
 import tensorflow as tf
 from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
 import numpy as np
 import os
+
 
 BATCH_SIZE=100
 TRANING_STEPS=10000
