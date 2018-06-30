@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu May 31 18:52:57 2018
+@author: GY
+"""
 import time
 import math
 import numpy as np
@@ -66,10 +71,6 @@ def loadCircleData(num_data):
 
 
 def loadBandData(num_unlabel_samples):
-    # Mat_Label = np.array([[5.0, 2.], [5.0, 8.0]])
-    # labels = [0, 1]
-    # Mat_Unlabel = np.array([[5.1, 2.], [5.0, 8.1]])
-
     Mat_Label = np.array([[5.0, 2.], [5.0, 8.0]])
     labels = [0, 1]
     num_dim = Mat_Label.shape[1]
